@@ -1,0 +1,21 @@
+.newsCard{
+    padding: 20px;
+    border: 2px solid greenyellow;
+}
+
+img{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+h2{
+    margin-bottom: 20px;
+}
+p{
+    color: rgb(42, 200, 155);
+    margin-bottom: 20px;
+}
+.readMore{
+  width: 100%;
+  background-color: aquamarine;
+}

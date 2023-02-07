@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+
+import NewApp from "./NewApp";
+import ProductList from "./component/ecommerce/ProductList/ProductList";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+import Error from "./Error";
+import User from "./User";
+import Project from "./Project";
+import Converter from "./Converter";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<NewApp />} />
+          <Route path="/shopping" element={<ProductList />} />
+          <Route path="/news" element={<NewApp />} />
+          <Route path="/converter" element={<Converter />} />
+          <Route path="*" element={<Error />} />
+          <Route path="/user/:userID" element={<User />} />
+          <Route path="/user/:userID/:project" element={<Project />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
